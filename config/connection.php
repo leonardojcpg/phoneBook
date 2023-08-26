@@ -1,7 +1,7 @@
 <?php 
 
     $host = "localhost";
-    $database = "phonebook";
+    $database = "phonebook_sql";
     $user = "root";
     $password = "";
 

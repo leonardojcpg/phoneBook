@@ -8,24 +8,23 @@ include_once("url.php");
 $data = $_POST;
 // modifying contact
 if (!empty($data)) {
-    print_r($data);
-    exit;
+    
     // creating Contact in database
     if ($data["type"] === "create") {
         $name = $data["name"];
         $phone = $data["phone"];
-        $observation = $data["observation"];
+        $observations = $data["observations"];
 
-        $query = "INSERT INTO contacts (name, phone, observation) VALUES (:name, :phone, :observation)";
+        $query = "INSERT INTO contacts (name, phone, observations) VALUES (:name, :phone, :observations)";
 
         $statement = $connection->prepare($query);
         $statement->bindParam(":name", $name);
         $statement->bindParam(":phone", $phone);
-        $statement->bindParam(":observation", $observation);
+        $statement->bindParam(":observations", $observations);
 
         try {
             $statement->execute();
-            $_SESSION["msg"] = "contact created successfully";
+            $_SESSION["msg"] = "Contact created successfully";
         } catch (PDOException $e) {
             $error = $e->getMessage();
             echo "Error: $error";

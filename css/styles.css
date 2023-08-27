@@ -107,4 +107,13 @@
     max-width: 31.25rem;
     margin: 0 auto;
 }
+#create-form label{
+    font-weight: bold;
+}
 
+/* MOBILE */
+@media(max-width: 30rem){
+    #home-link{
+        display: none;
+    }
+}

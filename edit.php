@@ -16,12 +16,12 @@ include_once("templates/header.php")
                 value="<?= $contact["name"] ?>" required>
         </div>
         <div class="form-group">
-            <label for="phone">Phone:</label>
+            <label for="phone" style="margin-top:1rem;">Phone:</label>
             <input type="text" class="form-control" id="phone" name="phone" placeholder="Type contact phone"
                 value="<?= $contact["phone"] ?>" required>
         </div>
         <div class="form-group">
-            <label for="observations">Observations:</label>
+            <label for="observations" style="margin-top:1rem;">Observations:</label>
             <textarea type="text" class="form-control" id="observations" name="observations"
                 placeholder=" Type any note" rows="3"><?= $contact["observations"] ?>
             </textarea>

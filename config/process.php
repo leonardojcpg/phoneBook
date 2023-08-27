@@ -11,6 +11,7 @@ if (!empty($data)) {
     
     // creating Contact in database
     if ($data["type"] === "create") {
+        
         $name = $data["name"];
         $phone = $data["phone"];
         $observations = $data["observations"];

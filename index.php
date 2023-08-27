@@ -29,7 +29,8 @@ include_once("templates/header.php");
                 <td scope="row"><?= $contact['observations'] ?></td>
 
                 <td class="actions">
-                    <a href="#"><i class="fas fa-eye check-icon"></i></a>
+                    <a href="<?= $BASE_URL ?>show.php?id=<?= $contact['id'] ?>"><i
+                            class="fas fa-eye check-icon"></i></a>
                     <a href="#"><i class="fas fa-edit edit-icon"></i></a>
                     <button type="submit" class="delete-button"><i class="fas fa-times delete-icon"></i></button>
                 </td>

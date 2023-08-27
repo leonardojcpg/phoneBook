@@ -8,7 +8,8 @@ include_once("templates/header.php")
 
     <form id="create-form" action="<?= $BASE_URL ?>config/process.php" method="POST">
         <input type="hidden" name="type" value="edit">
-        <input type="hidden" name="type" value="<?= $contact["id"] ?>">
+        <input type="hidden" name="contact_id" value="<?= $contact["id"] ?>">
+
 
         <div class="form-group">
             <label for="name">Name:</label>

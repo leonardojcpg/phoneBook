@@ -36,7 +36,7 @@ if (!empty($data)) {
         $name = $data["name"];
         $phone = $data["phone"];
         $observations = $data["observations"];
-        $id = $data["id"];
+        $id = $data["contact_id"];
 
         $query = "UPDATE contacts SET name = :name, phone = :phone, observations = :observations WHERE id = :id";
 
@@ -64,6 +64,7 @@ if (!empty($data)) {
         try {
             $statement->execute();
             $_SESSION["msg"] = "Removed successfully";
+            
         } catch (PDOException $e) {
             $error = $e->getMessage();
             echo "Error: $error";

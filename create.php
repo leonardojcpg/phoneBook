@@ -19,8 +19,8 @@ include_once("templates/header.php")
         </div>
         <div class="form-group">
             <label for="observations">Observations:</label>
-            <textarea type="text" class="form-control" id="observations" name="observations"
-                placeholder=" Type any note" rows="3">
+            <textarea type="text" class="form-control" id="observations" name="observations" placeholder="Type any note"
+                rows="3">
             </textarea>
         </div>
 

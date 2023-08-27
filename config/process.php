@@ -53,7 +53,22 @@ if (!empty($data)) {
             echo "Error: $error";
         }
 
+    } else if ($data["type"] === "delete"){
+        $id = $data["id"];
+
+        $query = "DELETE FROM contacts WHERE id = :id";
+        $statement = $connection->prepare($query);
+        $statement->bindParam(":id", $id);
+
+        try {
+            $statement->execute();
+            $_SESSION["msg"] = "Removed successfully";
+        } catch (PDOException $e) {
+            $error = $e->getMessage();
+            echo "Error: $error";
+        }
     }
+    
     // redirectig to home page
     header("Location:" . $BASE_URL . "../index.php");
 } else {

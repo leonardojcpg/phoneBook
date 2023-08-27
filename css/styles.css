@@ -70,3 +70,10 @@
     margin: 0 auto;
     margin-top: 1.875rem;
 }
+
+/* SHOW PAGE */
+
+#view-contact-container{
+    max-width: 31.25rem;
+    margin: 0 auto;
+}

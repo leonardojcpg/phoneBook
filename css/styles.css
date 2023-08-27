@@ -99,3 +99,11 @@
     color: #fff;
     transition: .1s;
 }
+
+/* CREATE PAGE */
+
+#create-form,
+#edit-form{
+    max-width: 31.25rem;
+    margin: 0 auto;
+}

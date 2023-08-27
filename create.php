@@ -6,7 +6,7 @@ include_once("templates/header.php")
     <?php include_once("templates/backButton.html") ?>
     <h1 id="main-title">Add Contact</h1>
 
-    <form action="<?= $BASE_URL ?>config/process.php" method="POST">
+    <form id="create-form" action="<?= $BASE_URL ?>config/process.php" method="POST">
         <input type="hidden" name="type" value="create">
 
         <div class="form-group">
@@ -19,8 +19,8 @@ include_once("templates/header.php")
         </div>
         <div class="form-group">
             <label for="observations">Observations:</label>
-            <textarea type="text" class="form-control" id="observations" name="observations" placeholder=" Type any
-                note" rows="3">
+            <textarea type="text" class="form-control" id="observations" name="observations"
+                placeholder=" Type any note" rows="3">
             </textarea>
         </div>
 
